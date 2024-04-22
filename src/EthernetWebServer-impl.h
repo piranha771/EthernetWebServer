@@ -276,7 +276,7 @@ void EthernetWebServer::handleClient()
             _contentLength = CONTENT_LENGTH_NOT_SET;
             _handleRequest();
 
-#if 0
+#if EWS_USE_CHROME_CONNECTION_FIX
 
             // Fix for issue with Chrome based browsers: https://github.com/espressif/arduino-esp32/issues/3652
             if (_currentClient.connected())
